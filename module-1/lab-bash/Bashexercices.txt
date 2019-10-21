@@ -1,0 +1,49 @@
+1.- $ echo Hello World
+2.- $ mkdir new_dir
+	ls 'para comprobar si está en el menú
+3.- $ rmdir new_dir
+	ls 'para comprobar si ya fue eliminado
+4.- $ls 
+	exercices/ inputs/ lorem/ lorem-copy/ outputs/ 		README.md
+    $ cd lorem
+    $ cp sed.txt ../lorem-copy
+    $ ls ../lorem-copy 'para verificar si se copió el comando
+5.- $ ls ../lorem
+	' ubicarse en el bloque
+    $ cp at.txt ../lorem-copy | cp lorem.txt ../lorem-copy
+6.- $ ls ../lorem
+	'verificar que estoy en la carpeta
+    $ cat sed.txt
+	' muestra el contenido del archivo
+7.- $ ls ../lorem
+	'verificas que estas en la carpeta de lorem
+    $ cat at.txt | cat lorem.txt
+	'ambos textos se copian, pero debido a la longitud de los caracteres, sólo se imprime lo último del código
+8.- $ cd
+    $ cd desktop
+    $ cd datamex1019
+	$ls
+	$ cd module-1
+	$ ls
+	$ cd lab-bash
+	$ cd lorem-copy
+
+    $ head -n3 sed.txt  
+9.- $ ls ../lorem-copy
+	'verificar que estas en la carpeta que deseas trabajar  
+    $ tail -n3 sed.txt
+10.- $ echo " Homo homini lupus" >> sed.txt
+11.- $ tail -n3 sed.txt
+12.- $ sed 's/et/ET/g' at.txt
+13.- $ id -un
+14.- $ pwd
+15.- $ ls
+16.- $ cat sed.txt | wc -l sed.txt
+17.- $ ls -l | wc -l
+18.- $ ls
+	verificar que estas en la carpeta correcta
+     $ grep 'et' at.txt
+     ' en caso de querer resaltar la palabra buscada en el texto sería:
+     $ grep --color 'et' at.txt
+19.- $ grep -o -i 'et' at.txt | wc -l
+20.- $ grep -rc [term] *
