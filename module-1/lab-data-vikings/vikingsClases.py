@@ -43,7 +43,7 @@ class Saxon(Soldier):
 
     def receiveDamage(self, damage):
         self.damage = damage
-        self.health - self.health - self.damage
+        self.health = self.health - self.damage
         if self.health > self.damage:
             return ('Saxon recibio puntos menos de vida'.format(self.damage))
         else:
