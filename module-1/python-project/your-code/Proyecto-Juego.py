@@ -21,7 +21,7 @@ while continuar == 1:
         while elegido in codigo:
             elegido = random.choice(digitos)
         codigo = codigo + elegido
-    print (codigo)
+
     print('Tenes que adivinar un codigo de', cant_digitos, 'digitos distintos')
     propuesta = input(' Que codigo propones?: ')
 
