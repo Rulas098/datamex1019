@@ -1,70 +1,63 @@
-#1. Import the NUMPY package under the name np.
+#1
 
+import numpy as np
 
+#2
 
-#2. Print the NUMPY version and the configuration.
+print(np.version.version)
 
+#3
 
+a=np.random.random((2,3,5))
 
-#3. Generate a 2x3x5 3-dimensional array with random values. Assign the array to variable "a"
-# Challenge: there are at least three easy ways that use numpy to generate random arrays. How many ways can you find?
+#4
 
+print(a)
+#5
 
+b=np.ones([5,3,2])
 
-#4. Print a.
+#6
 
+print(b)
+#7
 
+print (a.size==b.size)
 
-#5. Create a 5x2x3 3-dimensional array with all values equaling 1.
-#Assign the array to variable "b"
+#8
 
+#They can't join together because they haven't the same columns or lines
 
+#9
 
-#6. Print b.
+c = np.reshape(b, (2,3,5))
 
+#10
 
+d = (a+c)
 
-#7. Do a and b have the same size? How do you prove that in Python code?
+#11
 
+print(a)
+print(d)
 
+#12
 
+e = (a*c)
+print(a.size==e.size)
+#13
 
-#8. Are you able to add a and b? Why or why not?
+#Yes they are equal because they have the same size.
 
+#14
 
+d_max=np.max(d)
+d_mean=np.mean(d)
+d_min= np.min(d)
 
-#9. Transpose b so that it has the same structure of a (i.e. become a 2x3x5 array). Assign the transposed array to varialbe "c".
+#15.
 
-
-
-#10. Try to add a and c. Now it should work. Assign the sum to varialbe "d". But why does it work now?
-
-
-
-#11. Print a and d. Notice the difference and relation of the two array in terms of the values? Explain.
-
-
-
-
-#12. Multiply a and c. Assign the result to e.
-
-
-
-#13. Does e equal to a? Why or why not?
-
-
-
-
-#14. Identify the max, min, and mean values in d. Assign those values to variables "d_max", "d_min", and "d_mean"
-
-
-
-
-#15. Now we want to label the values in d. First create an empty array "f" with the same shape (i.e. 2x3x5) as d using `np.empty`.
-
-
-
-
+f = np.empty((2,3,5))
 """
 #16. Populate the values in f. For each value in d, if it's larger than d_min but smaller than d_mean, assign 25 to the corresponding value in f.
 If a value in d is larger than d_mean but smaller than d_max, assign 75 to the corresponding value in f.
@@ -75,8 +68,20 @@ In the end, f should have only the following values: 0, 25, 50, 75, and 100.
 Note: you don't have to use Numpy in this question.
 """
 
-
-
+for r in range(len(f)):
+    for i in range(len(f[r])):
+        for m in range(len(f[r][i])):
+            if d_min < d[r][i][m]< d_mean:
+                f[r][i][m] = 25
+            elif d_mean < d[r][i][m] < d_max:
+                f[r][i][m] = 75
+            elif d[r][i][m] == d_mean:
+                f[r][i][m] =50
+            elif d[r][i][m] == d_min:
+                f[r][i][m] = 0
+            elif d[r][i][m] == d_max:
+                f[r][i][m] =100
+print(f)
 
 """
 #17. Print d and f. Do you have your expected f?
@@ -112,3 +117,4 @@ array([[[ 'D',  'D',  'D',  'B',  'D'],
         [ 'B',  'D',   'A',  'D', 'D']]])
 Again, you don't need Numpy in this question.
 """
+
